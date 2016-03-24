@@ -33,7 +33,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\</OutputPath>
+    <OutputPath>..\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -43,7 +43,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\</OutputPath>
+    <OutputPath>..\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -56,7 +56,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSkin">
-      <HintPath>bin\Release\CSkin.dll</HintPath>
+      <HintPath>..\CSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -131,7 +131,7 @@
     <Content Include="tool.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ICSharpCode.SharpZLib\ICSharpCode.SharpZLib.csproj">
+    <ProjectReference Include="..\Lib\ICSharpCode.SharpZLib\ICSharpCode.SharpZLib.csproj">
       <Project>{0e7413ff-eb9e-4714-acf2-be3a6a7b2ffd}</Project>
       <Name>ICSharpCode.SharpZLib</Name>
     </ProjectReference>
@@ -146,10 +146,6 @@
     <ProjectReference Include="..\Lib\NPOI\ooxml\openxml4Net\OpenXml4Net vs2010.csproj">
       <Project>{c9f265b7-ece3-4755-b0b1-79536575c2a9}</Project>
       <Name>OpenXml4Net vs2010</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lib\NPOI\ooxml\OpenXmlFormats\OpenXmlFormats vs2010.csproj">
-      <Project>{a6874784-2875-4f40-9e8f-8385a640f5d6}</Project>
-      <Name>OpenXmlFormats vs2010</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("FileProcess Tool © NFrame")]
-[assembly: AssemblyDescription("Transfer NFrame excel configure file to NF")]
+[assembly: AssemblyDescription("Transfer NFrame excel configure file to XML")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("NFrame Studio")]
 [assembly: AssemblyProduct("NFrame")]
