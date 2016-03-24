@@ -339,6 +339,10 @@ namespace FileProcess
             hppWriter.Close();
             javaWriter.Close();
             csWriter.Close();
+
+            strHppIObjectInfo = "";
+            strJavaIObjectInfo = "";
+            strCSIObjectInfo = "";
         }
 
         void CreateStructThreadFunc()
