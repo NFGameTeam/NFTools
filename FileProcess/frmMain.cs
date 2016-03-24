@@ -841,36 +841,36 @@ namespace FileProcess
                             break;
                     }
 
-                    // cpp
-                    strHPPPropertyInfo += "\t// Record\n" + strHppRecordInfo + strHppEnumInfo + "\n};\n\n";
-                    hppWriter.Write(strHPPPropertyInfo);
-
-                    // java
-                    strJavaPropertyInfo += "\t// Record\n" + strJavaRecordInfo + strJavaEnumInfo + "\n}\n\n";
-                    javaWriter.Write(strJavaPropertyInfo);
-
-                    // C#
-                    strCSPropertyInfo += "\t// Record\n" + strCSRecordInfo + strCSEnumInfo + "\n}\n\n";
-                    csWriter.Write(strCSPropertyInfo);
-
-                    ////////////////////////////////////////////////////////////////////////////
-                    // 保存文件
-                    int nLastPoint = strFile.LastIndexOf(".") + 1;
-                    int nLastSlash = strFile.LastIndexOf("/") + 1;
-                    string strFileExt = strFile.Substring(nLastPoint, strFile.Length - nLastPoint);
-
-                    string strXMLFile = strToolBasePath + strXMLStructPath + strFileName;
-                    if (nCipher > 0)
-                    {
-                        strXMLFile += ".NF";
-                    }
-                    else
-                    {
-                        strXMLFile += ".xml";
-                    }
-                    structDoc.Save(strXMLFile);
-                    ProcessEncryptFile(strXMLFile);
                 }
+                // cpp
+                strHPPPropertyInfo += "\t// Record\n" + strHppRecordInfo + strHppEnumInfo + "\n};\n\n";
+                hppWriter.Write(strHPPPropertyInfo);
+
+                // java
+                strJavaPropertyInfo += "\t// Record\n" + strJavaRecordInfo + strJavaEnumInfo + "\n}\n\n";
+                javaWriter.Write(strJavaPropertyInfo);
+
+                // C#
+                strCSPropertyInfo += "\t// Record\n" + strCSRecordInfo + strCSEnumInfo + "\n}\n\n";
+                csWriter.Write(strCSPropertyInfo);
+
+                ////////////////////////////////////////////////////////////////////////////
+                // 保存文件
+                int nLastPoint = strFile.LastIndexOf(".") + 1;
+                int nLastSlash = strFile.LastIndexOf("/") + 1;
+                string strFileExt = strFile.Substring(nLastPoint, strFile.Length - nLastPoint);
+
+                string strXMLFile = strToolBasePath + strXMLStructPath + strFileName;
+                if (nCipher > 0)
+                {
+                    strXMLFile += ".NF";
+                }
+                else
+                {
+                    strXMLFile += ".xml";
+                }
+                structDoc.Save(strXMLFile);
+                ProcessEncryptFile(strXMLFile);
             }
             catch (Exception ex)
             {
@@ -912,8 +912,8 @@ namespace FileProcess
                     for (int i = 0; i < nColCount; i++)
                     {
                         try
-                        {                            
-                            if(((XSSFRow)rows.Current).GetCell(i).StringCellValue!="")
+                        {
+                            if (((XSSFRow)rows.Current).GetCell(i).StringCellValue != "")
                             {
                                 colNames[i] = ((XSSFRow)rows.Current).GetCell(i).StringCellValue;
                             }
@@ -923,16 +923,16 @@ namespace FileProcess
                                 break;
                             }
                         }
-                        catch(Exception err)
+                        catch (Exception err)
                         {
                             isEmpty = true;
                             break;
                         }
                     }
-                    if(isEmpty)
+                    if (isEmpty)
                     {
                         break;
-                    }                     
+                    }
                     while (rows.MoveNext())
                     {
                         XSSFRow row = rows.Current as XSSFRow;
@@ -941,11 +941,11 @@ namespace FileProcess
                         {
                             testValue = row.GetCell(0).StringCellValue;
                         }
-                        catch(Exception err)
+                        catch (Exception err)
                         {
                             continue;
                         }
-                        
+
                         if (testValue.IsNullOrEmpty())
                         {
                             continue;
