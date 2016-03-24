@@ -5,4 +5,4 @@ This is NFrame file process tool, transfer Excel to xml files, generate proto an
 
 ![FileProcess screenshot](https://github.com/eliteYang/NF_FileProcess/blob/master/FileProcess.png)
 
-Using CSkin & Aspose.Cells
+Using CSkin & NPOI
