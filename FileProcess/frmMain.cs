@@ -5,10 +5,8 @@ using CCWin;
 using CCWin.SkinControl;
 using System.Xml;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using NPOI.XSSF.UserModel;
-using System.Collections.Generic;
 
 namespace FileProcess
 {
