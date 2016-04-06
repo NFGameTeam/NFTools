@@ -229,13 +229,15 @@ namespace NFLoaderForWin
 
         private void myprocess_Exited(object sender, EventArgs e)//被触发的程序
         {
+            var pid = ((System.Diagnostics.Process)sender).Id;
             lock (txtLog)
             {
                 try
                 {
-                    txtLog.Text += ProcessIDs[((System.Diagnostics.Process)sender).Id] + " [" + ((System.Diagnostics.Process)sender).Id + "] close\r\n";
+                    txtLog.Text += ProcessIDs[pid] + " [" + pid + "] close\r\n";
                     txtLog.SelectionStart = txtLog.TextLength;
                     txtLog.ScrollToCaret();
+                    ProcessIDs.Remove(pid);
                 }
                 catch
                 {
@@ -250,7 +252,6 @@ namespace NFLoaderForWin
             {
                 Process.GetProcessById(serv).Kill();
             }
-            ProcessIDs.Clear();
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
